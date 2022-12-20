@@ -7,5 +7,6 @@ import com.sporty.shoes.entities.Hiking;
 
 @Repository // هذا البين قاعد يرتبط بالداتا بيس
 public interface HikingRepository extends CrudRepository<Hiking, Integer>  {
+	Hiking findByBrand(String brand);
 
 }

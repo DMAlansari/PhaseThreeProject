@@ -23,6 +23,10 @@ public class Sneakers {
 		this.quantity = quantity;
 		this.size = size;
 	}
+	public Sneakers(Integer serialNumber, String brand) {
+		this.serialNumber = serialNumber;
+		this.brand = brand;
+	}
 	public Integer getSerialNumber() {
 		return serialNumber;
 	}

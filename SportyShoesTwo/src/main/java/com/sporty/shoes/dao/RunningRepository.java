@@ -7,5 +7,6 @@ import com.sporty.shoes.entities.Running;
 
 @Repository
 public interface RunningRepository extends CrudRepository<Running, Integer> {
+	Running findByBrand(String brand);
 
 }

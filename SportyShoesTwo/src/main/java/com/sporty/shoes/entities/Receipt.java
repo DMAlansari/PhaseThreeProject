@@ -2,26 +2,33 @@ package com.sporty.shoes.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Receipt {
 	@Id
 	private Integer serialNumber;
-	private String  items;
+	private String  type;
 	private String  date;
 	private String  discount;
 	private Integer total;
 	
+
+	
+	
+	
 	public Receipt() {
 		
 	}
-	public Receipt(Integer serialNumber, String items, String date, String discount, Integer total) {
+	public Receipt(Integer serialNumber, String type, String date, String discount, Integer total, Integer sneaker) {
 		super();
 		this.serialNumber = serialNumber;
-		this.items = items;
+		this.type = type;
 		this.date = date;
 		this.discount = discount;
 		this.total = total;
+		
+	
 	}
 	public Integer getSerialNumber() {
 		return serialNumber;
@@ -29,11 +36,11 @@ public class Receipt {
 	public void setSerialNumber(Integer serialNumber) {
 		this.serialNumber = serialNumber;
 	}
-	public String getItems() {
-		return items;
+	public String getType() {
+		return type;
 	}
-	public void setItems(String items) {
-		this.items = items;
+	public void setType(String type) {
+		this.type = type;
 	}
 	public String getDate() {
 		return date;

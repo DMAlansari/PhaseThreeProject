@@ -7,5 +7,7 @@ import com.sporty.shoes.entities.Receipt;
 
 @Repository
 public interface ReceiptRepository extends CrudRepository <Receipt,Integer>{
+	Receipt findByDate(String date);
+	Receipt findByType(String type);
 
 }
