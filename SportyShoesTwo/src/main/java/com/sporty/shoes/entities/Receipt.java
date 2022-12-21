@@ -8,22 +8,22 @@ import jakarta.persistence.OneToMany;
 public class Receipt {
 	@Id
 	private Integer serialNumber;
-	private String  type;
 	private String  date;
 	private String  discount;
 	private Integer total;
-	
 
-	
-	
-	
 	public Receipt() {
 		
 	}
-	public Receipt(Integer serialNumber, String type, String date, String discount, Integer total, Integer sneaker) {
+
+	public Receipt(Integer serialNumber, String type) {
 		super();
 		this.serialNumber = serialNumber;
-		this.type = type;
+		
+	}
+	public Receipt(Integer serialNumber, String date, String discount, Integer total) {
+		super();
+		this.serialNumber = serialNumber;
 		this.date = date;
 		this.discount = discount;
 		this.total = total;
@@ -36,12 +36,7 @@ public class Receipt {
 	public void setSerialNumber(Integer serialNumber) {
 		this.serialNumber = serialNumber;
 	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
+
 	public String getDate() {
 		return date;
 	}

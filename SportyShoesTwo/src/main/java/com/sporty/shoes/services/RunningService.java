@@ -27,6 +27,10 @@ public class RunningService {
 	public void addRunning(Running running) {
 		 repo.save(running);
 	}
+	
+	public void updateRunning (Running running) {
+		repo.save(running);
+	}
 
 }
 

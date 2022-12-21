@@ -30,10 +30,10 @@ public class ReceiptService {
 			return repo.findByDate(date);
 		}
 		
-		public Receipt findByType(String type) {
-			return repo.findByType(type);
-		}
-		
+//		public Receipt findByType(String type) {
+//			return repo.findByType(type);
+//		}
+//		
 		
 
 	}

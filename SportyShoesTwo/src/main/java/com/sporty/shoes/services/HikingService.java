@@ -28,5 +28,11 @@ public class HikingService {
 		return repo.findByBrand(brand);
 	}
 	
+	public void deletById(Integer id) {
+		 repo.deleteById(id);
+	}
+	
+
+	
 
 }

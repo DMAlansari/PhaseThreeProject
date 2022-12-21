@@ -31,22 +31,26 @@ public class ReceiptController {
 	public void addReceipt(@RequestBody Receipt receipt ) {
 		service.addReceipt(receipt);
 	}
+	
+//	Receipt findByDate(@PathVariable String date) {
+//		return service.findByDate(date);
+//	}
 //	
-//	@PostMapping("/places/{userId}")
+//	@PostMapping("/places/{useId}")
 //	void addNewPlace(@RequestBody Place place, @PathVariable Integer userId) {
 //		//Before adding a new place, map it to a User : Because places without users can't exist :
 //		place.setUser(new User(userId, "", ""));
 //		
 //		service.addPlace(place);
 	
-	@GetMapping("receipt/by/date/")
+	@GetMapping("receipt/by/date/{date}")
 	public Receipt findByDate(@PathVariable String date) {
 		return service.findByDate(date);
 	}
 	
-	@GetMapping("receipt/by/type/")
-	public Receipt findByType(@PathVariable String type) {
-		return service.findByType(type);
-	}
+//	@GetMapping("receipt/by/type/")
+//	public Receipt findByType(@PathVariable String type) {
+//		return service.findByType(type);
+//	}
 
 }
